@@ -1,38 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Verset du jour</title>
-<style>
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Georgia, serif;
-  background: white;
-  color: #222;
-}
-#dailyVersesWrapper {
-  max-width: 700px;
-  padding: 35px;
-  font-size: 28px;
-  line-height: 1.5;
-}
-#dailyVersesWrapper a {
-  color: #222;
-  text-decoration: none;
-}
-.dailyVerses.bibleVerse a {
-  font-weight: bold;
-}
-</style>
-</head>
-<body>
-<div id="dailyVersesWrapper"></div>
-<script async defer src="https://dailyverses.net/get/verse.js?language=sg21"></script>
-</body>
-</html>
+<style>body{margin:0;min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;font-family:Georgia,serif;background:white;color:#222}#verset{max-width:700px;padding:35px;font-size:28px;line-height:1.5}.reference{margin-top:25px;font-size:20px;font-weight:bold}</style>
+</head><body><div id="verset"></div><script>
+const versets=[["L'Éternel est mon berger : je ne manquerai de rien.","Psaume 23:1"],["Je puis tout par celui qui me fortifie.","Philippiens 4:13"],["Car rien n'est impossible à Dieu.","Luc 1:37"],["L'Éternel est ma lumière et mon salut : de qui aurais-je crainte ?","Psaume 27:1"],["Confie-toi en l'Éternel de tout ton cœur.","Proverbes 3:5"],["Dieu est pour nous un refuge et un appui.","Psaume 46:2"],["Que tout ce que vous faites se fasse avec amour.","1 Corinthiens 16:14"]];
+const maintenant=new Date(),debut=new Date(maintenant.getFullYear(),0,0),numeroJour=Math.floor((maintenant-debut)/86400000),verset=versets[numeroJour%versets.length];document.getElementById('verset').innerHTML='« '+verset[0]+' »<div class="reference">'+verset[1]+'</div>';
+</script></body></html>
