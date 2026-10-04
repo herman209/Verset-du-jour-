@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verset du jour</title>
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Georgia, serif;
+  background: white;
+  color: #222;
+}
+#dailyVersesWrapper {
+  max-width: 700px;
+  padding: 35px;
+  font-size: 28px;
+  line-height: 1.5;
+}
+#dailyVersesWrapper a {
+  color: #222;
+  text-decoration: none;
+}
+.dailyVerses.bibleVerse a {
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div id="dailyVersesWrapper"></div>
+<script async defer src="https://dailyverses.net/get/verse.js?language=sg21"></script>
+</body>
+</html>
